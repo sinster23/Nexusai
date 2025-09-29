@@ -20,6 +20,7 @@ import {
 import { styles } from "../styles/StoryPlay";
 import StorySessionService from '../utils/sessionManager';
 import { auth } from '../firebase';
+import { BACKEND_URL } from "@env";
 
 const { width: screenWidth } = Dimensions.get('window');
 
@@ -487,7 +488,7 @@ const loadStorySessionData = async (sessionData) => {
         console.log('Generated new session ID:', newSessionId);
       }
       
-      const response = await fetch("http://192.168.0.105:5000/api/generate", {
+      const response = await fetch(`${BACKEND_URL}/api/generate`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -598,7 +599,7 @@ const loadStorySessionData = async (sessionData) => {
   const loadCustomizationQuestions = async () => {
     try {
       setLoadingQuestions(true);
-      const response = await fetch("http://192.168.0.105:5000/api/customization-questions", {
+      const response = await fetch(`${BACKEND_URL}/api/customization-questions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -744,7 +745,7 @@ const loadStorySessionData = async (sessionData) => {
     setStoryParts(prev => [...prev, choicePart]);
 
     try {
-      const response = await fetch("http://192.168.0.105:5000/api/continue", {
+      const response = await fetch(`${BACKEND_URL}/api/continue`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -827,7 +828,7 @@ const loadStorySessionData = async (sessionData) => {
     setUserInput("");
 
     try {
-      const response = await fetch("http://192.168.0.105:5000/api/continue", {
+      const response = await fetch(`${BACKEND_URL}/api/continue`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

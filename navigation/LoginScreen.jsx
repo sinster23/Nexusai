@@ -151,7 +151,7 @@ const LoginScreen = () => {
     setIsSendingOtp(true);
     
     try {
-      const response = await fetch(`http://192.168.0.103:5000/api/auth/send-otp`, {
+      const response = await fetch(`${BACKEND_URL}/api/auth/send-otp`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -180,7 +180,7 @@ const LoginScreen = () => {
 
     try {
       // First verify OTP with backend
-      const response = await fetch(`http://192.168.0.103:5000/api/auth/verify-otp`, {
+      const response = await fetch(`${BACKEND_URL}/api/auth/verify-otp`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
