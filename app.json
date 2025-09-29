@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "ai-story-app",
+    "name": "NexusAI",
     "slug": "ai-story-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo1.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
@@ -20,7 +20,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.sinster.aistoryapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
