@@ -1,5 +1,5 @@
 
-# ✨ NexusAI – AI Story App
+#  NexusAI – AI Story App
 
 NexusAI is a React Native app built with Expo that lets users explore and play AI-generated stories. It features secure user authentication with firebase, story generation with gemini API and the most important feature is user can control the story based on his choices.
 
